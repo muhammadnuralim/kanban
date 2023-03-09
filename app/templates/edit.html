@@ -1,0 +1,36 @@
+{%extends "base.html" %}
+
+{%block title%}
+    Home page
+{%endblock%}
+
+{%block content %}
+<nav>
+        <ul>
+            <li>
+                <a href="#">
+                    {email}
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="flex-wrapper">
+            <form action="{{url_for('update')}}" method="POST" class="flex-form">
+              <h1>Edit Note</h1>
+              <input type="hidden" name="id" value="{{kanban.id}}">
+            <label for="title">Title</label>
+            <input type="text" class="input-title" name="title" value="{{kanban.title}}">
+            <label for="content">Description</label>
+            <textarea name="content" class="input-content" cols="60">{{kanban.content}}</textarea>
+            <input type="submit" value="Update Item" class="btn">
+          </form>
+        </div>
+    </div>
+{%endblock%}

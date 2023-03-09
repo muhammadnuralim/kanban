@@ -1,0 +1,195 @@
+/* Nilai Default */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+html, body{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    background-color: #ececec;
+}
+
+/* Untuk page login */
+.flex-container{
+    height: 100%;
+    padding: 0;
+    flex-direction: column;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container .input{
+    height: 6%;
+    width: 50%;
+    padding: 0;
+    margin: 10pt 0 10pt 0;
+    border: none;
+    border-bottom: 4pt solid grey;
+}
+
+.flex-container .input[type="text"]{
+    font-size: 30pt;
+    outline: none;
+}
+
+.flex-container .input[type="text"]:focus{
+    border-bottom: 4pt solid black;
+}
+
+.flex-container label{
+    margin: 10pt 0 10pt 0;
+    font-size: 16pt;
+}
+
+.btn-action{
+    cursor: pointer;
+    background-color: blue;
+    padding: 10pt 5pt 10pt 5pt;
+    font-size: 18pt;
+    color: white;
+    border: none;
+    width: 20%;
+    border-radius: 10pt 0 10pt;
+}
+
+
+
+
+/* untuk page home */
+.float{
+	position:fixed;
+	width:60pt;
+	height:60pt;
+	bottom:40pt;
+	right:40pt;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50pt;
+	text-align:center;
+	box-shadow: 2pt 2pt 3pt #999;
+}
+
+.container{
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 100vh;
+}
+.flex-action{
+    display: flex;
+    gap: 5pt;
+    flex-direction: row;
+}
+.flex-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 10pt;
+    margin-top: 10%;
+}
+.flex-wrapper .input-title[type="text"]{
+    font-size: 20pt;
+    width: 40%;
+}
+
+.flex-wrapper .input-content{
+    width: 40%;
+    font-size: 20pt;
+}
+
+.flex-wrapper h1{
+    margin-top: 2%;
+    padding: 1%;
+}
+
+.btn{
+    width: 20%;
+    cursor: pointer;
+    padding: 0 10pt 0 10pt;
+    font-size: 20pt;
+    border: none;
+    background-color: #0C9;
+    color: white;
+    border-radius: 10pt;
+}
+
+.flex-wrapper{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.badge-action{
+    cursor: pointer;
+    border:none;
+    text-decoration: none;
+    background-color: blue;
+    padding: 1pt 5pt 1pt 5pt;
+    border-radius: 20pt;
+    width: auto;
+    color: white;
+}
+
+.success{
+    background-color: green;
+
+}
+
+.edit{
+    background-color:yellow;
+    color: black;
+}
+
+.delete{
+    background-color: red;
+    color: black;
+}
+
+.flex-item{
+    border: 1pt solid black;
+    border-radius: 10pt;
+    padding: 10pt;
+    margin-bottom: 20pt;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: auto;
+}
+.bg-done{
+    background-color: #999;
+}
+.done{
+    text-decoration: line-through;
+}
+.flex-item p{
+    padding: 2pt;
+    margin-top: 10pt;
+    text-align: justify;
+}
+
+/* untuk navbar */
+nav{
+    background-color: #0C9;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 20pt;
+    align-items: end;
+    margin-right: 10%;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
