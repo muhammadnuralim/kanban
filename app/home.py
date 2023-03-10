@@ -21,7 +21,6 @@ def home():
 @jwt_required(locations = ["cookies"])
 def addnote():
      user = get_jwt_identity()
-
      return render_template("add.html", user=user)
 
 @admin.route("/show/<id>/", methods=["GET", "POST"])

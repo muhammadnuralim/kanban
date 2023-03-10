@@ -4,8 +4,7 @@ db = SQLAlchemy()
 
 class Kanban(db.Model):
     __tablename__ = 'kanban'
-    id = db.Column(db.Integer, primary_key=True)
-    public_id = db.Column(db.String(50), unique = True)
+    public_id = db.Column(db.String(50), unique = True, primary_key=True)
     title = db.Column(db.String(50))
     content = db.Column(db.String(255))
     is_done = db.Column(db.Boolean, default=False)
