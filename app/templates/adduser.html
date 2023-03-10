@@ -4,15 +4,19 @@
 {%endblock%}
 
 {%block content %}
-<form action="/login" method="POST" class="container">
+<form action="/signup" method="POST" class="container">
 <div class="flex-container">
+
     <h1>Login</h1>
-        <label for="username">Email</label>
+        <label for="username">Name</label>
+        <input type="text" class="input" name="name">
+        <label for="email">Email</label>
         <input type="text" class="input" name="email">
         <label for="password">Password</label>
         <input type="password" class="input" name="password">
+        <label for="password">Confirm Password</label>
+        <input type="password" class="input" name="password2">
         <button class="btn-action">Confirm</button>
-        <a href="/showAddForm">Sign up now!</a>
     </div>
 </form>
 {%endblock%}

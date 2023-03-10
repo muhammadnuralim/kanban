@@ -1,10 +1,12 @@
-const div = document.getElementById('h2');
-const addBtn = document.getElementById('done-btn');
-
-// addBtn.addEventListener('click',()=>{
-//     div.classList.add('done');
-// })
-
-// removeBtn.addEventListener('click',()=>{
-//     div.classList.remove('shadow');
-// })
+async function makeRequestWithJWT() {
+    const options = {
+      method: 'post',
+      credentials: 'same-origin',
+      headers: {
+        'X-CSRF-TOKEN': getCookie('csrf_access_token'),
+      },
+    };
+    const response = await fetch('/insert', options);
+    const result = await response.json();
+    return result;
+  }
