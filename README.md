@@ -1,5 +1,4 @@
 # kanban
-Ini adalah kanban app
 Untuk menggunakan install 
 - postgresql
 - flask
