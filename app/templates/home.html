@@ -14,7 +14,7 @@
             </li>
             <li>
                 <form action="/admin/logout" method="POST">
-                    <input type="submit" value="logout">
+                    <input type="submit" value="logout" class="logout">
                 </form>
             </li>
         </ul>
@@ -28,11 +28,11 @@
             <div class="flex-item bg-done">
                 <h2 class="done">{{kanban.title}}</h2>
                 <div class="flex-action">
-                    <a href="/admin/show/{{kanban.id}}" class="badge-action edit">Edit</a>
-                    <form action="./delete/{{kanban.id}}">
+                    <a href="/admin/show/{{kanban.kanban_id}}" class="badge-action edit">Edit</a>
+                    <form action="./delete/{{kanban.kanban_id}}">
                         <input type="submit" class="badge-action delete" value="Delete">
                     </form>
-                    <form action="/admin/done/{{kanban.id}}" method="POST">
+                    <form action="/admin/done/{{kanban.kanban_id}}" method="POST">
                         <input type="submit" value="Done" class="badge-action success">
                     </form>
                 </div>
@@ -42,11 +42,11 @@
             <div class="flex-item">
                 <h2>{{kanban.title}}</h2>
                 <div class="flex-action">
-                    <a href="/admin/show/{{kanban.id}}" class="badge-action edit">Edit</a>
-                    <form action="./delete/{{kanban.id}}">
+                    <a href="/admin/show/{{kanban.kanban_id}}" class="badge-action edit">Edit</a>
+                    <form action="./delete/{{kanban.kanban_id}}">
                         <input type="submit" class="badge-action delete" value="Delete">
                     </form>
-                    <form action="/admin/done/{{kanban.id}}" method="POST">
+                    <form action="/admin/done/{{kanban.kanban_id}}" method="POST">
                         <input type="submit" value="Done" class="badge-action success">
                     </form>
                 </div>
