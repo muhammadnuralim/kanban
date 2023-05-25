@@ -4,12 +4,14 @@ db = SQLAlchemy()
 
 class Kanban(db.Model):
     __tablename__ = 'kanban'
-    public_id = db.Column(db.String(50), unique = True, primary_key=True)
+    kanban_id = db.Column(db.String(50), unique = True, primary_key = True)
+    public_id = db.Column(db.String(50))
     title = db.Column(db.String(50))
     content = db.Column(db.String(255))
     is_done = db.Column(db.Boolean, default=False)
 
-    def __init__(self,public_id, title, content, is_done):
+    def __init__(self,kanban_id, public_id, title, content, is_done):
+            self.kanban_id = kanban_id
             self.public_id = public_id
             self.title= title
             self.content=content
