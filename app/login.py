@@ -1,3 +1,4 @@
+import random
 from app.model import db, User
 from flask import request, redirect, url_for,render_template, Blueprint, jsonify, make_response, make_response
 from functools import wraps
@@ -66,7 +67,7 @@ def signup():
         if not user:
             #database ORM object
             user = User(
-                public_id = str(uuid.uuid4),
+                public_id = str(random.seed(uuid.uuid4)),
                 name = name,
                 email = email, 
                 password = generate_password_hash(password, method='pbkdf2:sha1', salt_length=4)
